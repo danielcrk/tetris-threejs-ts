@@ -1,0 +1,34 @@
+{
+  "name": "tetris",
+  "version": "1.0.0",
+  "description": "A basic 3d tetris game experiment",
+  "author": "Daniel Crkvencic",
+  "main": "app.ts",
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "tetris"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "watch": "onchange \"src/*.ts\" -- npm run build",
+    "serve": "webpack-dev-server --inline --hot --no-info",
+    "dev": "concurrently --kill-others \"npm run watch\" \"npm run serve\""
+  },
+  "devDependencies": {
+    "concurrently": "^3.4.0",
+    "onchange": "^3.2.1",
+    "ts-loader": "^2.1.0",
+    "tslint": "^5.3.2",
+    "typescript": "^2.3.3",
+    "webpack": "^2.6.0"
+  },
+  "dependencies": {
+    "@types/three": "^0.84.8",
+    "babel-polyfill": "^6.26.0",
+    "hammerjs": "^2.0.8",
+    "three": "^0.85.2",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
